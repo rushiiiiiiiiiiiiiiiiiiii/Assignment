@@ -215,7 +215,7 @@ export default function StoriesOfChange() {
     "
             aria-label="Scroll left"
           >
-            <img src="/public/Arrow 10.png" alt="" />
+            <img src="/Arrow 10.png" alt="" />
           </button>
 
           <span className="opacity-70">scroll to explore more</span>
@@ -230,7 +230,7 @@ export default function StoriesOfChange() {
     "
             aria-label="Scroll right"
           >
-            <img src="/public/Arrow 9.png" alt="" />
+            <img src="/Arrow 9.png" alt="" />
           </button>
         </div>
       </div>

@@ -12,14 +12,14 @@ const PILLARS = [
     id: 2,
     title: "Smart Early Education",
     subtitle: "interactive, digital, inclusive",
-    icon: "/u07V2J.tif.png",
+    icon: "/public/u07V2J.tif.png",
     image: "/Education.jpg",
   },
   {
     id: 3,
     title: "Health & Wellness",
     subtitle: "preventive care, wellbeing",
-    icon: "/Layer_2 (1).png",
+    icon: "/Group.png",
     image: "/Education.jpg",
   },
   {

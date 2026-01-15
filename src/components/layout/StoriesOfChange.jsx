@@ -12,14 +12,24 @@ const STORIES = [
     caption:
       "MLA, Vishwaraj Mewar & MP Mahima Mewar, inaugurating Nand Ghars in Rajsamand",
   },
-  { id: 3, image: "/impact3.png", caption: "Walls of Hope" },
+  {
+    id: 3,
+    image: "/impact3.png",
+    caption:
+      "MLA, Vishwaraj Mewar & MP Mahima Mewar, inaugurating Nand Ghars in Rajsamand",
+  },
   {
     id: 4,
     image: "/impact2.png",
     caption:
       "MLA, Vishwaraj Mewar & MP Mahima Mewar, inaugurating Nand Ghars in Rajsamand",
   },
-  { id: 5, image: "/impact3.png", caption: "Walls of Hope" },
+  {
+    id: 5,
+    image: "/impact3.png",
+    caption:
+      "MLA, Vishwaraj Mewar & MP Mahima Mewar, inaugurating Nand Ghars in Rajsamand",
+  },
   {
     id: 6,
     image: "/impact1.png",
@@ -57,6 +67,22 @@ export default function StoriesOfChange() {
     return () => rail.removeEventListener("scroll", onScroll);
   }, []);
 
+  const scrollLeft = () => {
+    if (!railRef.current) return;
+    railRef.current.scrollBy({
+      left: -railRef.current.offsetWidth * 0.8,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    if (!railRef.current) return;
+    railRef.current.scrollBy({
+      left: railRef.current.offsetWidth * 0.8,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="relative w-full bg-[#F7F5EF] overflow-hidden">
       {/* GREEN SHAPE */}
@@ -85,18 +111,17 @@ export default function StoriesOfChange() {
         </p>
 
         {/* SCROLL RAIL */}
-      <div
-  ref={railRef}
-  className="
+        <div
+          ref={railRef}
+          className="
     flex gap-[15px]
-    px-[16px] md:px-[24px] pr-[120px]
+    px-[12px] md:px-[24px] lg:px-[80px]
     overflow-x-auto
     scroll-smooth
     no-scrollbar
     snap-x snap-mandatory
   "
->
-
+        >
           {STORIES.map((story, index) => {
             const isActive = index === activeIndex;
             const isNear = Math.abs(index - activeIndex) === 1;
@@ -117,47 +142,49 @@ export default function StoriesOfChange() {
                 `}
               >
                 <div
-                  className="
-                    bg-white rounded-[34px] border-[8px] border-white
-                    flex flex-col items-center
+                  className={`
+    bg-white rounded-[34px] border-[8px] border-white
+    flex flex-col items-center
+    transition-transform duration-500 ease-out
 
-                    /* DESKTOP */
-                    w-[661px] h-[456px]
+    /* MOBILE (default) */
+    w-[320px] h-[300px]
 
-                    /* TABLET */
-                    md:w-[520px] md:h-[380px]
+    /* TABLET */
+    md:w-[520px] md:h-[380px]
 
-                    /* MOBILE */
-                    w-[340px] h-[320px]
-                  "
+    /* DESKTOP */
+    lg:w-[661px] lg:h-[456px]
+  `}
                 >
                   <img
                     src={story.image}
                     alt=""
                     className="
-                      rounded-[24px] object-cover
+      rounded-[24px] object-cover
 
-                      /* DESKTOP */
-                      w-[635px] h-[387px]
+      /* MOBILE */
+      w-[280px] h-[200px]
 
-                      /* TABLET */
-                      md:w-[480px] md:h-[300px]
+      /* TABLET */
+      md:w-[480px] md:h-[300px]
 
-                      /* MOBILE */
-                      w-[300px] h-[240px]
-                    "
+      /* DESKTOP */
+      lg:w-[635px] lg:h-[387px]
+    "
                   />
 
                   <p
                     className="
-                      mt-[12px]
-                      px-[18px]
-                      text-center
-                      text-[16px]
-                      leading-[120%]
+      mt-[12px]
+      px-[18px]
+      text-center
+      text-[14px]
+      leading-[120%]
 
-                      sm:text-[14px]
-                    "
+      md:text-[14px]
+      lg:text-[16px]
+    "
                     style={{ fontFamily: "Outfit, sans-serif" }}
                   >
                     {story.caption}
@@ -169,12 +196,43 @@ export default function StoriesOfChange() {
         </div>
 
         {/* FOOTER */}
-        <p
-          className="mt-[32px] text-center text-[14px]"
+        <div
+          className="
+    mt-[32px]
+    flex items-center justify-center gap-[7px]
+    text-[14px]
+    select-none
+  "
           style={{ fontFamily: "Outfit, sans-serif" }}
         >
-          ← scroll to explore more →
-        </p>
+          <button
+            onClick={scrollLeft}
+            className="
+      px-[px] py-[6px]
+      rounded-full
+      hover:bg-black/5
+      transition
+    "
+            aria-label="Scroll left"
+          >
+            <img src="/public/Arrow 10.png" alt="" />
+          </button>
+
+          <span className="opacity-70">scroll to explore more</span>
+
+          <button
+            onClick={scrollRight}
+            className="
+      px-[px] py-[6px]
+      rounded-full
+      hover:bg-black/5
+      transition
+    "
+            aria-label="Scroll right"
+          >
+            <img src="/public/Arrow 9.png" alt="" />
+          </button>
+        </div>
       </div>
     </section>
   );

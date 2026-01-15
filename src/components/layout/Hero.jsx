@@ -4,45 +4,69 @@ import { HeroButtons } from "./HeroButtons";
 
 export default function Hero() {
   const images = ["/home.jpg", "/report3.png"];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const [prev, setPrev] = useState(null);
 
+  /* AUTO SLIDE — ALWAYS RTL */
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
+      goNext();
     }, 3000);
+
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [current]);
+
+  const goNext = () => {
+    setPrev(current);
+    setCurrent((current + 1) % images.length);
+  };
+
+  const goPrev = () => {
+    setPrev(current);
+    setCurrent(current === 0 ? images.length - 1 : current - 1);
+  };
 
   return (
     <section className="relative w-full h-screen lg:h-[800px] overflow-hidden">
-      {/* BACKGROUND */}
-      <img
-        src={images[currentIndex]}
-        alt="Hero"
-        className="
-          absolute inset-0
-          w-full h-full
-          object-cover
-          object-[20%_50%]
-        "
-      />
+      {/* SLIDES */}
+      <div className="absolute inset-0">
+        {prev !== null && (
+          <img
+            src={images[prev]}
+            className="
+              absolute inset-0
+              w-full h-full
+              object-fill
+              animate-slide-out-left
+            "
+            alt=""
+          />
+        )}
 
-      {/* 1440 FRAME */}
+        <img
+          key={current}
+          src={images[current]}
+          className="
+            absolute inset-0
+            w-full h-full
+            object-cover
+            animate-slide-in-right
+          "
+          alt=""
+        />
+      </div>
+
+      {/* CONTENT */}
       <div className="relative max-w-[1440px] mx-auto h-full">
-        {/* TEXT BLOCK — LOCKED */}
         <div
           className="
-            absolute
-            flex flex-col gap-[16px]
+            absolute flex flex-col gap-[16px]
 
-            /* MOBILE */
             bottom-[96px]
             left-[16px]
             right-[16px]
-            text-center
-            items-center
+            text-center items-center
 
-            /* TABLET */
             sm:bottom-[120px]
             sm:left-[40px]
             sm:right-auto
@@ -50,49 +74,40 @@ export default function Hero() {
             sm:text-left
             sm:items-start
 
-            /* DESKTOP — FIGMA EXACT */
             lg:top-[223px]
             lg:right-[80px]
             lg:left-auto
             lg:bottom-auto
             lg:w-[530px]
-            lg:text-left
-            lg:items-start
           "
         >
           <HeroText />
           <HeroButtons />
         </div>
 
-        {/* SLIDER INDICATOR */}
+        {/* CONTROLS */}
         <div
           className="
-            absolute
-            bottom-[24px]
-            left-1/2
-            -translate-x-1/2
-            flex items-center gap-[12px]
-            text-white text-[16px] sm:text-[18px]
+            absolute bottom-[24px]
+            left-1/2 -translate-x-1/2
+            flex items-center gap-[16px]
+            text-white text-[16px]
           "
         >
           <button
-            onClick={() =>
-              setCurrentIndex((prev) =>
-                prev === 0 ? images.length - 1 : prev - 1
-              )
-            }
-            className="opacity-80 hover:opacity-100"
+            onClick={goPrev}
+            className="opacity-80 hover:opacity-100 transition"
           >
             ←
           </button>
 
-          <span>{currentIndex + 1}/{images.length}</span>
+          <span>
+            {current + 1}/{images.length}
+          </span>
 
           <button
-            onClick={() =>
-              setCurrentIndex((prev) => (prev + 1) % images.length)
-            }
-            className="opacity-80 hover:opacity-100"
+            onClick={goNext}
+            className="opacity-80 hover:opacity-100 transition"
           >
             →
           </button>

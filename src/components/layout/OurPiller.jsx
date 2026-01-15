@@ -32,7 +32,7 @@ const PILLARS = [
 ];
 
 export default function OurPillars() {
-  const [hoveredId, setHoveredId] = useState(1); // default hovered like Figma
+  const [hoveredId, setHoveredId] = useState(0); // default hovered like Figma
 
   return (
     <section className="w-full bg-[#F7F5EF]">
@@ -47,87 +47,90 @@ export default function OurPillars() {
         </h4>
 
         {/* DESKTOP / TABLET ROW */}
-        <div
-          className="
-            hidden
-            lg:flex
-            w-[1280px]
-            mx-auto
-            justify-between
-          "
-        >
-          {PILLARS.map((item) => {
-            const isHovered = hoveredId === item.id;
+        <div className="hidden lg:block">
+          <div
+            className="
+      max-w-[1280px]
+      mx-auto
+      overflow-x-auto
+      no-scrollbar
+    "
+          >
+            <div className="flex gap-[24px] w-max">
+              {PILLARS.map((item) => {
+                const isHovered = hoveredId === item.id;
 
-            return (
-              <div
-                key={item.id}
-                onMouseEnter={() => setHoveredId(item.id)}
-                className={`
-                  bg-white
-                  rounded-[24px]
-                  p-[24px]
-                  h-[389px]
-                  overflow-hidden
-                  transition-all
-                  duration-300
-                  ease-in-out
-                  flex
-                  flex-col
-                  ${isHovered ? "w-[400px]" : "w-[240px]"}
-                `}
-              >
-                {/* DEFAULT STATE */}
-                {!isHovered && (
-                  <>
-                    <div className="flex-1" />
+                return (
+                  <div
+                    key={item.id}
+                    onMouseEnter={() => setHoveredId(item.id)}
+                    className={`
+              bg-white
+              rounded-[24px]
+              p-[24px]
+              h-[389px]
+              flex
+              flex-col
+              transition-all
+              duration-300
+              ease-in-out
+              shrink-0
+              ${isHovered ? "w-[400px]" : "w-[240px]"}
+            `}
+                  >
+                    {/* DEFAULT STATE */}
+                    {!isHovered && (
+                      <>
+                        <div className="flex-1" />
 
-                    <div className="flex flex-col gap-[10px]">
-                      <img
-                        src={item.icon}
-                        alt=""
-                        className="w-[52px] h-[58px]"
-                      />
+                        <div className="flex flex-col gap-[10px]">
+                          <img
+                            src={item.icon}
+                            alt=""
+                            className="w-[52px] h-[58px]"
+                          />
 
-                      <h2
-                        className="text-[22px] font-semibold leading-[22px]"
-                        style={{ fontFamily: "Parkinsans, sans-serif" }}
-                      >
-                        {item.title}
-                      </h2>
-                    </div>
-                  </>
-                )}
+                          <h2
+                            className="text-[22px] font-semibold leading-[22px]"
+                            style={{ fontFamily: "Parkinsans, sans-serif" }}
+                          >
+                            {item.title}
+                          </h2>
+                        </div>
+                      </>
+                    )}
 
-                {/* HOVER STATE */}
-                {isHovered && (
-                  <>
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="w-[352px] h-[253px] rounded-[12px] object-cover"
-                    />
+                    {/* HOVER STATE */}
+                    {isHovered && (
+                      <>
+                        <img
+                          src={item.image}
+                          alt=""
+                          className="w-[352px] h-[253px] rounded-[12px] object-cover"
+                        />
 
-                    <div className="mt-[16px]">
-                      <h2
-                        className="text-[22px] font-semibold leading-[22px]"
-                        style={{ fontFamily: "Parkinsans, sans-serif" }}
-                      >
-                        {item.title}
-                      </h2>
+                        <div className="mt-[16px]">
+                          <h2
+                            className="text-[22px] font-semibold leading-[22px]"
+                            style={{ fontFamily: "Parkinsans, sans-serif" }}
+                          >
+                            {item.title}
+                          </h2>
 
-                      <p
-                        className="text-[16px] mt-[6px]"
-                        style={{ fontFamily: "Outfit, sans-serif" }}
-                      >
-                        {item.subtitle}
-                      </p>
-                    </div>
-                  </>
-                )}
-              </div>
-            );
-          })}
+                          <p
+                            className="text-[16px] mt-[6px]"
+                            style={{ fontFamily: "Outfit, sans-serif" }}
+                          >
+                            {item.subtitle}
+                          </p>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* MOBILE — HORIZONTAL SCROLL */}

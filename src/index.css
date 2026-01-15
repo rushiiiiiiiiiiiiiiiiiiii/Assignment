@@ -20,3 +20,28 @@ html {
 section {
   scroll-margin-top: 80px; /* navbar height */
 }
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.7s ease-in-out forwards;
+}
+
+.animate-slide-out-left {
+  animation: slideOutLeft 0.7s ease-in-out forwards;
+}

@@ -1,0 +1,129 @@
+import React, { useState } from "react";
+
+const PILLARS = [
+  {
+    id: 1,
+    title: "Nutrition & Food Security",
+    subtitle: "healthy meals, nourishment, growth",
+    icon: "/public/u07V2J.tif.png",
+    image: "/public/Education.jpg",
+  },
+  {
+    id: 2,
+    title: "Smart Early Education",
+    subtitle: "interactive, digital, inclusive",
+    icon: "/public/u07V2J.tif.png",
+    image: "/public/Education.jpg",
+  },
+  {
+    id: 3,
+    title: "Health & Wellness",
+    subtitle: "preventive care, wellbeing",
+    icon: "/public/Layer_2 (1).png",
+    image: "/public/Education.jpg",
+  },
+  {
+    id: 4,
+    title: "Women Empowerment",
+    subtitle: "skills, livelihoods, leadership",
+    icon: "/public/Layer_2 (1).png",
+    image: "/public/Education.jpg",
+  },
+];
+
+export default function OurPillars() {
+  const [hoveredId, setHoveredId] = useState(2); // default hovered (Figma)
+
+  return (
+    <section className="w-full bg-[#F7F5EF]">
+      {/* 1440 FRAME */}
+      <div className="max-w-[1440px] mx-auto px-[80px] py-[40px]">
+
+        {/* TITLE */}
+        <h4
+          className="text-center text-[16px] font-medium mb-[20px]"
+          style={{ fontFamily: "Outfit, sans-serif" }}
+        >
+          OUR PILLARS
+        </h4>
+
+        {/* ✅ EXACT FIGMA ROW */}
+        <div className="w-[1280px] mx-auto flex justify-between">
+
+          {PILLARS.map((item) => {
+            const isHovered = hoveredId === item.id;
+
+            return (
+              <div
+                key={item.id}
+                onMouseEnter={() => setHoveredId(item.id)}
+                className={`
+                  bg-white
+                  rounded-[24px]
+                  p-[24px]
+                  h-[389px]
+                  overflow-hidden
+                  transition-all
+                  duration-300
+                  ease-in-out
+                  flex
+                  flex-col
+                  ${isHovered ? "w-[400px]" : "w-[240px]"}
+                `}
+              >
+                {/* DEFAULT STATE — BOTTOM ALIGNED */}
+                {!isHovered && (
+                  <>
+                    <div className="flex-1" />
+
+                    <div className="flex flex-col gap-[10px]">
+                      <img
+                        src={item.icon}
+                        alt=""
+                        className="w-[52px] h-[58px]"
+                      />
+
+                      <h2
+                        className="text-[22px] font-semibold leading-[22px]"
+                        style={{ fontFamily: "Parkinsans, sans-serif" }}
+                      >
+                        {item.title}
+                      </h2>
+                    </div>
+                  </>
+                )}
+
+                {/* HOVER STATE */}
+                {isHovered && (
+                  <>
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-[352px] h-[253px] rounded-[12px] object-cover"
+                    />
+
+                    <div className="mt-[16px]">
+                      <h2
+                        className="text-[22px] font-semibold leading-[22px]"
+                        style={{ fontFamily: "Parkinsans, sans-serif" }}
+                      >
+                        {item.title}
+                      </h2>
+
+                      <p
+                        className="text-[16px] mt-[6px]"
+                        style={{ fontFamily: "Outfit, sans-serif" }}
+                      >
+                        {item.subtitle}
+                      </p>
+                    </div>
+                  </>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

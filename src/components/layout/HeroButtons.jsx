@@ -1,15 +1,29 @@
 export function HeroButtons() {
   return (
-    <div className="flex gap-[18px]">
+    <div
+      className="
+        flex
+        flex-col
+        gap-[14px]
+
+        sm:flex-row
+        sm:gap-[18px]
+      "
+    >
       {/* SUPPORT US */}
       <button
         className="
           h-[47px]
-          px-[24px]
+          px-[20px]
+          sm:px-[24px]
+
           border-2
           border-[#FFDA00]
           rounded-[999px]
-          text-[14px]
+
+          text-[13px]
+          sm:text-[14px]
+
           font-bold
           leading-[14px]
           text-[#FFDA00]
@@ -22,10 +36,15 @@ export function HeroButtons() {
       <button
         className="
           h-[47px]
-          px-[24px]
+          px-[20px]
+          sm:px-[24px]
+
           bg-[#5BAF26]
           rounded-[999px]
-          text-[14px]
+
+          text-[13px]
+          sm:text-[14px]
+
           font-bold
           leading-[14px]
           text-white

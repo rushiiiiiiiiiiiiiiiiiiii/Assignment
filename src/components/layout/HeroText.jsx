@@ -4,8 +4,10 @@ export function HeroText() {
       className="
         text-white
         font-bold
-        text-[30px]
-        leading-[30px]
+
+        text-[20px] leading-[26px]
+        sm:text-[24px] sm:leading-[30px]
+        lg:text-[30px] lg:leading-[30px]
       "
     >
       Nand Ghar, powered by Vedanta,

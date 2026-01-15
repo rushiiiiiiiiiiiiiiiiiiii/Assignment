@@ -3,10 +3,7 @@ import { HeroText } from "./HeroText";
 import { HeroButtons } from "./HeroButtons";
 
 export default function Hero() {
-  const images = [
-    "/public/home.jpg",
-    "/public/Infrastructure.png",
-  ];
+  const images = ["/public/home.jpg", "/public/report3.png"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -16,18 +13,27 @@ export default function Hero() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
-    <section className="relative w-full h-[800px] overflow-hidden">
-      {/* BACKGROUND IMAGE (FIGMA MATCH) */}
+    <section
+      className="
+        relative
+        w-full
+        h-screen
+lg:h-[800px]
+
+        overflow-hidden
+      "
+    >
+      {/* BACKGROUND IMAGE */}
       <img
         src={images[currentIndex]}
         alt="Hero"
         className="
           absolute inset-0
-          w-[1440px] h-[800px]
-          object-fit
+          w-full h-full
+          object-cover
           object-[20%_50%]
           transition-opacity
           duration-700
@@ -40,36 +46,77 @@ export default function Hero() {
         <div
           className="
             absolute
-            top-[223px]
-            right-[80px]
-            w-[530px]
             flex
             flex-col
             gap-[16px]
+
+            /* MOBILE */
+            bottom-[96px]
+            left-[16px]
+            right-[16px]
+            text-center
+            items-center
+
+            /* TABLET */
+            sm:bottom-[120px]
+            sm:left-[40px]
+            sm:right-auto
+            sm:text-left
+            sm:items-start
+            sm:w-[420px]
+
+            /* DESKTOP — FIGMA EXACT */
+            lg:top-[223px]
+            lg:right-[80px]
+            lg:left-auto
+            lg:bottom-auto
+            lg:w-[530px]
+            lg:items-start
+            lg:text-left
           "
         >
           <HeroText />
           <HeroButtons />
         </div>
 
-        {/* SLIDER INDICATOR — CENTERED */}
+        {/* SLIDER INDICATOR */}
         <div
           className="
             absolute
-            bottom-[36px]
+            bottom-[24px]
             left-1/2
             -translate-x-1/2
             flex
             items-center
             gap-[12px]
             text-white
-            text-[18px]
-            font-normal
+            text-[16px]
+            sm:text-[18px]
           "
         >
-          <span className="cursor-pointer select-none">←</span>
-          <span>{currentIndex + 1}/{images.length}</span>
-          <span className="cursor-pointer select-none">→</span>
+          <button
+            onClick={() =>
+              setCurrentIndex((prev) =>
+                prev === 0 ? images.length - 1 : prev - 1
+              )
+            }
+            className="opacity-80 hover:opacity-100 transition"
+          >
+            ←
+          </button>
+
+          <span>
+            {currentIndex + 1}/{images.length}
+          </span>
+
+          <button
+            onClick={() =>
+              setCurrentIndex((prev) => (prev + 1) % images.length)
+            }
+            className="opacity-80 hover:opacity-100 transition"
+          >
+            →
+          </button>
         </div>
       </div>
     </section>

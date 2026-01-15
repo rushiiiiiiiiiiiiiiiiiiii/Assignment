@@ -5,7 +5,6 @@ export default function InfrastructureUpgradation() {
     <section className="w-full bg-[#F7F5EF]">
       {/* FRAME */}
       <div className="max-w-[1440px] mx-auto px-[16px] lg:px-[80px] py-[40px]">
-
         {/* ROW */}
         <div
           className="
@@ -80,12 +79,12 @@ export default function InfrastructureUpgradation() {
               "
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
-              Nand Ghars are modern Anganwadis designed as lively, creative spaces
-              with equipped with LED television, child-friendly furniture, access to
-              clean water, play areas, hygienic toilets, and dedicated health
-              and nutrition areas. Infrastructure upgradation is the cornerstone
-              of Nand Ghar creating pathways to better learning, nutrition,
-              healthcare, and women’s empowerment.
+              Nand Ghars are modern Anganwadis designed as lively, creative
+              spaces with equipped with LED television, child-friendly
+              furniture, access to clean water, play areas, hygienic toilets,
+              and dedicated health and nutrition areas. Infrastructure
+              upgradation is the cornerstone of Nand Ghar creating pathways to
+              better learning, nutrition, healthcare, and women’s empowerment.
             </p>
 
             {/* CTA BUTTON */}
@@ -121,7 +120,7 @@ export default function InfrastructureUpgradation() {
             "
           >
             <img
-              src="/public/Infrastructure.png"
+              src="/Infrastructure.png"
               alt="Infrastructure Upgradation"
               className="w-full h-full object-cover rounded-[24px]"
             />

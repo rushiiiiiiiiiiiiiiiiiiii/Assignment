@@ -3,7 +3,7 @@ import { HeroText } from "./HeroText";
 import { HeroButtons } from "./HeroButtons";
 
 export default function Hero() {
-  const images = ["/public/home.jpg", "/public/report3.png"];
+  const images = ["/home.jpg", "/report3.png"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

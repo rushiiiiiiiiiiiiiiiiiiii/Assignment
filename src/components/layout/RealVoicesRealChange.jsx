@@ -3,31 +3,31 @@ import React, { useEffect, useRef, useState } from "react";
 const TESTIMONIALS = [
   {
     id: 1,
-    image: "/public/Voice1.png",
+    image: "/Voice1.png",
     text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly...”`,
     name: "— Sikarama Ram Choyal, Deputy Director, Bharatpur",
   },
   {
     id: 2,
-    image: "/public/Infrastructure.png",
+    image: "/Infrastructure.png",
     text: `“The infrastructure upgrades and digital enablement have transformed early education delivery. Parents are more engaged and attendance has improved across centers...”`,
     name: "— District Education Officer",
   },
   {
     id: 3,
-    image: "/public/Education.jpg",
+    image: "/Education.jpg",
     text: `“Nand Ghars have become a hub for community development, healthcare awareness, and child nutrition...”`,
     name: "— Block Development Officer",
   },
   {
     id: 4,
-    image: "/public/Infrastructure.png",
+    image: "/Infrastructure.png",
     text: `“The infrastructure upgrades and digital enablement have transformed early education delivery...”`,
     name: "— District Education Officer",
   },
   {
     id: 5,
-    image: "/public/Voice1.png",
+    image: "/Voice1.png",
     text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars...”`,
     name: "— Sikarama Ram Choyal, Deputy Director, Bharatpur",
   },
@@ -58,22 +58,17 @@ export default function RealVoicesRealChange() {
 
   const goPrev = () => {
     stopAutoScroll();
-    setActiveIndex((prev) =>
-      prev === 0 ? TESTIMONIALS.length - 1 : prev - 1
-    );
+    setActiveIndex((prev) => (prev === 0 ? TESTIMONIALS.length - 1 : prev - 1));
   };
 
   const goNext = () => {
     stopAutoScroll();
-    setActiveIndex((prev) =>
-      prev === TESTIMONIALS.length - 1 ? 0 : prev + 1
-    );
+    setActiveIndex((prev) => (prev === TESTIMONIALS.length - 1 ? 0 : prev + 1));
   };
 
   return (
     <section className="w-full bg-[#A8D08D]">
       <div className="max-w-[1440px] mx-auto px-[24px] py-[20px]">
-
         {/* TITLE */}
         <p
           className="text-center text-[14px] uppercase tracking-wide mb-[24px]"
@@ -84,7 +79,6 @@ export default function RealVoicesRealChange() {
 
         {/* CONTENT */}
         <div className="relative mx-auto max-w-[1232px]">
-
           {/* IMAGE */}
           <div className="flex justify-center mb-[20px]">
             <img
@@ -163,7 +157,10 @@ export default function RealVoicesRealChange() {
 
         {/* CTA */}
         <div className="mt-[40px] flex flex-col sm:flex-col items-center gap-[32px]">
-          <p className="text-[16px]" style={{ fontFamily: "Outfit, sans-serif" }}>
+          <p
+            className="text-[16px]"
+            style={{ fontFamily: "Outfit, sans-serif" }}
+          >
             Be part of the transformation
           </p>
 

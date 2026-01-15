@@ -1,12 +1,30 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const STORIES = [
-  { id: 1, image: "/public/impact1.png", caption: "CM, UP, Yogi Adityanath visiting Nand Ghar in Varanasi" },
-  { id: 2, image: "/public/impact2.png", caption: "MLA, Vishwaraj Mewar & MP Mahima Mewar, inaugurating Nand Ghars in Rajsamand" },
-  { id: 3, image: "/public/impact3.png", caption: "Walls of Hope" },
-  { id: 4, image: "/public/impact2.png", caption: "MLA, Vishwaraj Mewar & MP Mahima Mewar, inaugurating Nand Ghars in Rajsamand" },
-  { id: 5, image: "/public/impact3.png", caption: "Walls of Hope" },
-  { id: 6, image: "/public/impact1.png", caption: "CM, UP, Yogi Adityanath visiting Nand Ghar in Varanasi" },
+  {
+    id: 1,
+    image: "/impact1.png",
+    caption: "CM, UP, Yogi Adityanath visiting Nand Ghar in Varanasi",
+  },
+  {
+    id: 2,
+    image: "/impact2.png",
+    caption:
+      "MLA, Vishwaraj Mewar & MP Mahima Mewar, inaugurating Nand Ghars in Rajsamand",
+  },
+  { id: 3, image: "/impact3.png", caption: "Walls of Hope" },
+  {
+    id: 4,
+    image: "/impact2.png",
+    caption:
+      "MLA, Vishwaraj Mewar & MP Mahima Mewar, inaugurating Nand Ghars in Rajsamand",
+  },
+  { id: 5, image: "/impact3.png", caption: "Walls of Hope" },
+  {
+    id: 6,
+    image: "/impact1.png",
+    caption: "CM, UP, Yogi Adityanath visiting Nand Ghar in Varanasi",
+  },
 ];
 
 export default function StoriesOfChange() {

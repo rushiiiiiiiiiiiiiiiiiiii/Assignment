@@ -5,29 +5,29 @@ const PILLARS = [
     id: 1,
     title: "Nutrition & Food Security",
     subtitle: "healthy meals, nourishment, growth",
-    icon: "/public/u07V2J.tif.png",
-    image: "/public/Education.jpg",
+    icon: "/u07V2J.tif.png",
+    image: "/Education.jpg",
   },
   {
     id: 2,
     title: "Smart Early Education",
     subtitle: "interactive, digital, inclusive",
-    icon: "/public/u07V2J.tif.png",
-    image: "/public/Education.jpg",
+    icon: "/u07V2J.tif.png",
+    image: "/Education.jpg",
   },
   {
     id: 3,
     title: "Health & Wellness",
     subtitle: "preventive care, wellbeing",
-    icon: "/public/Layer_2 (1).png",
-    image: "/public/Education.jpg",
+    icon: "/Layer_2 (1).png",
+    image: "/Education.jpg",
   },
   {
     id: 4,
     title: "Women Empowerment",
     subtitle: "skills, livelihoods, leadership",
-    icon: "/public/Layer_2 (1).png",
-    image: "/public/Education.jpg",
+    icon: "/Layer_2 (1).png",
+    image: "/Education.jpg",
   },
 ];
 
@@ -38,7 +38,6 @@ export default function OurPillars() {
     <section className="w-full bg-[#F7F5EF]">
       {/* 1440 FRAME */}
       <div className="max-w-[1440px] mx-auto px-[16px] lg:px-[80px] py-[40px]">
-
         {/* TITLE */}
         <h4
           className="text-center text-[16px] font-medium mb-[20px]"

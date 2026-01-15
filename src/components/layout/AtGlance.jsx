@@ -1,11 +1,11 @@
 import React from "react";
 
 const STATS = [
-  { value: "17", label: "States present in", icon: "/public/U9q1R0.tif.png" },
-  { value: "66", label: "Districts present in", icon: "/public/U9q1R0.tif.png" },
-  { value: "10,000+", label: "Nand Ghars", icon: "/public/Layer_1.png" },
-  { value: "4,00,000+", label: "Children impacted", icon: "/public/Layer_2.png" },
-  { value: "3,00,000+", label: "Women impacted", icon: "/public/Layer_2 (1).png" },
+  { value: "17", label: "States present in", icon: "/U9q1R0.tif.png" },
+  { value: "66", label: "Districts present in", icon: "/U9q1R0.tif.png" },
+  { value: "10,000+", label: "Nand Ghars", icon: "/Layer_1.png" },
+  { value: "4,00,000+", label: "Children impacted", icon: "/Layer_2.png" },
+  { value: "3,00,000+", label: "Women impacted", icon: "/Layer_2 (1).png" },
 ];
 
 export default function AtGlance() {
@@ -13,7 +13,6 @@ export default function AtGlance() {
     <section className="w-full bg-[#F7F5EF]">
       {/* FRAME */}
       <div className="max-w-[1440px] mx-auto px-[16px] lg:px-[80px] py-[30px] flex flex-col items-center gap-[24px]">
-        
         {/* ROOF VECTOR */}
         <div className="w-[262px] h-[57.5px]">
           <svg

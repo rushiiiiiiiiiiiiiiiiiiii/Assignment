@@ -9,41 +9,35 @@ export default function Footer() {
           className="
             max-w-[1440px]
             mx-auto
-            px-[80px]
-            py-[32px]
-          
-            flex
+            px-[10px]
+            h-[112px]
+
+            grid
+            grid-cols-[464px_1fr]
             items-center
-            justify-between
-            max-lg:flex-col
-            max-lg:items-start
-            max-lg:gap-[24px]
+
             max-lg:px-[24px]
+            max-lg:grid-cols-1
+            max-lg:h-auto
+            max-lg:py-[32px]
+            max-lg:gap-[24px]
           "
         >
           {/* TEXT */}
           <p
             className="
               text-[22px]
+              leading-[28px]
               font-medium
-              leading-[22px]
-              max-w-[464px]
+              text-center
             "
             style={{ fontFamily: "Parkinsans, sans-serif" }}
           >
             Every rupee, every hour, every hand builds India’s tomorrow.
           </p>
 
-          {/* CTA BUTTONS */}
-          <div
-            className="
-              flex
-              gap-[10px]
-              flex-nowrap
-
-              max-lg:flex-wrap
-            "
-          >
+          {/* BUTTONS */}
+          <div className="flex gap-[12px] justify-end flex-wrap max-lg:justify-start">
             <CTAButton outline>ADOPT A NAND GHAR</CTAButton>
             <CTAButton outline>DONATE NOW</CTAButton>
             <CTAButton filled>PARTNER WITH US</CTAButton>
@@ -58,23 +52,23 @@ export default function Footer() {
           className="
             max-w-[1440px]
             mx-auto
-            px-[80px]
-            py-[36px]
+            px-[40px]
+            py-[48px]
 
             grid
-            lg:grid-cols-[336px_1fr]
-            gap-x-[98px]
+            grid-cols-[360px_1fr]
+            gap-x-[60px]
 
-            max-lg:grid-cols-1
-            max-lg:gap-[32px]
             max-lg:px-[24px]
+            max-lg:grid-cols-1
+            max-lg:gap-y-[40px]
           "
         >
           {/* LOGOS */}
-          <div className="flex items-start gap-[24px]">
+          <div className="flex items-start gap-[32px]">
             <img
               src="/footerlogo.png"
-              alt="Anil Agarwal Foundation"
+              alt="Foundation Logos"
               className="h-[86px]"
             />
           </div>
@@ -84,51 +78,51 @@ export default function Footer() {
             className="
               grid
               grid-cols-4
-              gap-[48px]
 
               max-lg:grid-cols-2
               max-sm:grid-cols-1
+              max-lg:gap-y-[32px]
             "
           >
             <FooterColumn title="NAVIGATE">
-              <li className="whitespace-nowrap">Home</li>
-              <li className="whitespace-nowrap">About Us</li>
-              <li className="whitespace-nowrap">Our Impact</li>
-              <li className="whitespace-nowrap">Gallery</li>
-              <li className="whitespace-nowrap">Media</li>
-              <li className="whitespace-nowrap">Resources</li>
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Our Impact</li>
+              <li>Gallery</li>
+              <li>Media</li>
+              <li>Resources</li>
             </FooterColumn>
 
             <FooterColumn title="OUR WORK">
-              <li className="whitespace-nowrap">Education</li>
-              <li className="whitespace-nowrap">Nutrition</li>
-              <li className="whitespace-nowrap">Healthcare</li>
-              <li className="whitespace-nowrap">Women’s Empowerment</li>
+              <li>Education</li>
+              <li>Nutrition</li>
+              <li>Healthcare</li>
+              <li>Women’s Empowerment</li>
             </FooterColumn>
 
             <FooterColumn title="GET INVOLVED">
-              <li className="whitespace-nowrap">Donate Now</li>
-              <li className="whitespace-nowrap">Adopt a Nand Ghar</li>
-              <li className="whitespace-nowrap">Partner with Us</li>
-              <li className="whitespace-nowrap">Volunteer with Us</li>
-              <li className="whitespace-nowrap">Spread the Word</li>
-              <li className="whitespace-nowrap">Contact Us</li>
+              <li>Donate Now</li>
+              <li>Adopt a Nand Ghar</li>
+              <li>Partner with Us</li>
+              <li>Volunteer with Us</li>
+              <li>Spread the Word</li>
+              <li>Contact Us</li>
             </FooterColumn>
 
             <FooterColumn title="FIND US">
-              <li className="flex items-start gap-[8px] whitespace-normal">
-                <img src="/loc.png" className="w-[16px] h-[16px] mt-[2px]" />
+              <li className="flex items-start gap-[8px]">
+                <img src="/loc.png" className="w-[16px] h-[16px] mt-[3px]" />
                 Core-6, 3rd Flr, Scope Complex, Lodhi Road, Delhi-110003
               </li>
-              <li className="flex items-center gap-[8px] whitespace-nowrap">
+              <li className="flex items-center gap-[8px]">
                 <img src="/email.png" className="w-[16px] h-[16px]" />
                 contactus@nandghar.org
               </li>
-              <li className="flex items-center gap-[8px] whitespace-nowrap">
+              <li className="flex items-center gap-[8px]">
                 <img src="/wp.png" className="w-[16px] h-[16px]" />
                 +91 7307356813
               </li>
-              <li className="flex items-center gap-[8px] whitespace-nowrap">
+              <li className="flex items-center gap-[8px]">
                 <img src="/watch.png" className="w-[16px] h-[16px]" />
                 9:30 AM to 6 PM
               </li>
@@ -147,14 +141,14 @@ function CTAButton({ children, outline, filled }) {
     <button
       className={`
         h-[47px]
-        w-[200px]
+        px-[24px]
         rounded-full
         text-[14px]
         font-medium
         whitespace-nowrap
 
-        ${outline ? "border-[2px] border-[#1D69AC] text-[#1D69AC]" : ""}
-        ${filled ? "bg-[#FFD200] text-black border-[2px] border-[#FFD200]" : ""}
+        ${outline ? "border-2 border-[#1D69AC] text-[#1D69AC]" : ""}
+        ${filled ? "bg-[#FFD200] text-[#1D69AC] border-2 border-[#FFD200]" : ""}
       `}
     >
       {children}
@@ -165,10 +159,10 @@ function CTAButton({ children, outline, filled }) {
 function FooterColumn({ title, children }) {
   return (
     <div>
-      <h4 className="text-white text-[14px] font-semibold mb-[12px]">
+      <h4 className="text-white text-[14px] font-semibold mb-[14px]">
         {title}
       </h4>
-      <ul className="text-white text-[12px] leading-[18px] space-y-[6px]">
+      <ul className="text-white text-[13px] leading-[22px] space-y-[6px]">
         {children}
       </ul>
     </div>

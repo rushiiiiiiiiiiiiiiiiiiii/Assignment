@@ -69,7 +69,7 @@ export default function SocialUpdates() {
         </div>
 
         {/* FOLLOW US */}
-        <div className="mt-[40px] flex flex-col items-center gap-[12px]">
+        <div className="mt-[40px] flex justify-center items-center gap-[12px]">
           <p
             className="text-[16px]"
             style={{ fontFamily: "Outfit, sans-serif" }}

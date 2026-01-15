@@ -73,7 +73,7 @@ export default function Footer() {
           {/* LOGOS */}
           <div className="flex items-start gap-[24px]">
             <img
-              src="/public/footerlogo.png"
+              src="/footerlogo.png"
               alt="Anil Agarwal Foundation"
               className="h-[86px]"
             />
@@ -117,19 +117,19 @@ export default function Footer() {
 
             <FooterColumn title="FIND US">
               <li className="flex items-start gap-[8px] whitespace-normal">
-                <img src="/public/loc.png" className="w-[16px] h-[16px] mt-[2px]" />
+                <img src="/loc.png" className="w-[16px] h-[16px] mt-[2px]" />
                 Core-6, 3rd Flr, Scope Complex, Lodhi Road, Delhi-110003
               </li>
               <li className="flex items-center gap-[8px] whitespace-nowrap">
-                <img src="/public/email.png" className="w-[16px] h-[16px]" />
+                <img src="/email.png" className="w-[16px] h-[16px]" />
                 contactus@nandghar.org
               </li>
               <li className="flex items-center gap-[8px] whitespace-nowrap">
-                <img src="/public/wp.png" className="w-[16px] h-[16px]" />
+                <img src="/wp.png" className="w-[16px] h-[16px]" />
                 +91 7307356813
               </li>
               <li className="flex items-center gap-[8px] whitespace-nowrap">
-                <img src="/public/watch.png" className="w-[16px] h-[16px]" />
+                <img src="/watch.png" className="w-[16px] h-[16px]" />
                 9:30 AM to 6 PM
               </li>
             </FooterColumn>
@@ -153,16 +153,8 @@ function CTAButton({ children, outline, filled }) {
         font-medium
         whitespace-nowrap
 
-        ${
-          outline
-            ? "border-[2px] border-[#1D69AC] text-[#1D69AC]"
-            : ""
-        }
-        ${
-          filled
-            ? "bg-[#FFD200] text-black border-[2px] border-[#FFD200]"
-            : ""
-        }
+        ${outline ? "border-[2px] border-[#1D69AC] text-[#1D69AC]" : ""}
+        ${filled ? "bg-[#FFD200] text-black border-[2px] border-[#FFD200]" : ""}
       `}
     >
       {children}

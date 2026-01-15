@@ -3,7 +3,7 @@ import React from "react";
 const NEWS = [
   {
     id: 1,
-    image: "/public/report1.png",
+    image: "/report1.png",
     category: "In The Press",
     date: "12-12-2026",
     title: "Nutrition | Nand Ghar | Anil Agarwal Foundation",
@@ -12,7 +12,7 @@ const NEWS = [
   },
   {
     id: 2,
-    image: "/public/report2.png",
+    image: "/report2.png",
     category: "Blog",
     date: "12-12-2026",
     title: "Nutrition | Nand Ghar | Anil Agarwal Foundation",
@@ -21,7 +21,7 @@ const NEWS = [
   },
   {
     id: 3,
-    image: "/public/report3.png",
+    image: "/report3.png",
     category: "Report",
     date: "12-12-2026",
     title: "Nutrition | Nand Ghar | Anil Agarwal Foundation",
@@ -30,7 +30,7 @@ const NEWS = [
   },
   {
     id: 4,
-    image: "/public/report4.jpg",
+    image: "/report4.jpg",
     category: "Events",
     date: "12-12-2026",
     title: "Nutrition | Nand Ghar | Anil Agarwal Foundation",
@@ -39,7 +39,7 @@ const NEWS = [
   },
   {
     id: 5,
-    image: "/public/report5.jpg",
+    image: "/report5.jpg",
     category: "Article",
     date: "12-12-2026",
     title: "Nutrition | Nand Ghar | Anil Agarwal Foundation",
@@ -48,7 +48,7 @@ const NEWS = [
   },
   {
     id: 6,
-    image: "/public/report6.jpg",
+    image: "/report6.jpg",
     category: "Blog",
     date: "12-12-2026",
     title: "Nutrition | Nand Ghar | Anil Agarwal Foundation",

@@ -4,31 +4,31 @@ const TESTIMONIALS = [
   {
     id: 1,
     image: "/Voice1.png",
-    text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly”`,
+    text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted, and children are now experiencing a vibrant educational environment. The transformation of Anganwadi buildings into Nand Ghars has also increased their longevity. With their modern classroom-like appearance, Nand Ghars have sparked greater interest in learning among children. We extend our heartfelt thanks to the Vedanta Group for this initiative.”`,
     name: "— Sikarama Ram Choyal, Deputy Director, Bharatpur",
   },
   {
     id: 2,
     image: "/Infrastructure.png",
-    text: `“The infrastructure upgrades and digital enablement have transformed early education delivery. Parents are more engaged and attendance has improved across centers Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly Also now avaiable”`,
+    text: `“The infrastructure upgrades and digital enablement have transformed early education delivery. Parents are more engaged and attendance has improved across centers Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly Also now avaiable Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted.”`,
     name: "— District Education Officer",
   },
   {
     id: 3,
     image: "/Education.jpg",
-    text: `“Nand Ghars have become a hub for community development, healthcare awareness, and child nutrition Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable”`,
+    text: `“Nand Ghars have become a hub for community development, healthcare awareness, and child nutrition Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted.”`,
     name: "— Block Development Officer",
   },
   {
     id: 4,
     image: "/Infrastructure.png",
-    text: `“The infrastructure upgrades and digital enablement have transformed early education delivery Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars  As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable”`,
+    text: `“The infrastructure upgrades and digital enablement have transformed early education delivery Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars  As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted.”`,
     name: "— District Education Officer",
   },
   {
     id: 5,
     image: "/Voice1.png",
-    text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars  As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable the public perception of Anganwadi centers has improved significantly Also now avaiable”`,
+    text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars  As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable the public perception of Anganwadi centers has improved significantly Also now avaiable Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted.”`,
     name: "— Sikarama Ram Choyal, Deputy Director, Bharatpur",
   },
 ];
@@ -106,7 +106,6 @@ export default function RealVoicesRealChange() {
               leading-[120%]
               md:text-[15px]
               sm:text-[14px]
-              mb-[px]
             "
             style={{ fontFamily: "Outfit, sans-serif" }}
           >
@@ -122,7 +121,7 @@ export default function RealVoicesRealChange() {
           </p>
 
           {/* DOTS + ARROWS */}
-          <div className="flex justify-center items-center gap-[12px] mt-[16px]">
+          <div className="flex justify-center items-center gap-[12px] mt-[20px]">
             <button
               onClick={goPrev}
               className="text-[14px] text-[#1D69AC] opacity-60 hover:opacity-100"
@@ -172,7 +171,7 @@ export default function RealVoicesRealChange() {
         >
           {/* TEXT */}
           <p
-            className="text-[16px]"
+            className="text-[22px]"
             style={{ fontFamily: "Outfit, sans-serif" }}
           >
             Be part of the transformation
@@ -185,7 +184,7 @@ export default function RealVoicesRealChange() {
       grid-cols-2
       gap-[21px]
 
-      sm:grid-cols-2
+      sm:grid-cols-2 
       lg:grid-cols-2
     "
           >
@@ -210,3 +209,38 @@ export default function RealVoicesRealChange() {
     </section>
   );
 }
+
+
+
+// const TESTIMONIALS = [
+//   {
+//     id: 1,
+//     image: "/Voice1.png",
+//     text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted, and children are now experiencing a vibrant educational environment. The transformation of Anganwadi buildings into Nand Ghars has also increased their longevity. With their modern classroom-like appearance, Nand Ghars have sparked greater interest in learning among children. We extend our heartfelt thanks to the Vedanta Group for this initiative.”`,
+//     name: "— Sikarama Ram Choyal, Deputy Director, Bharatpur",
+//   },
+//   {
+//     id: 2,
+//     image: "/Infrastructure.png",
+//     text: `“The infrastructure upgrades and digital enablement have transformed early education delivery. Parents are more engaged and attendance has improved across centers Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly Also now avaiable Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted.”`,
+//     name: "— District Education Officer",
+//   },
+//   {
+//     id: 3,
+//     image: "/Education.jpg",
+//     text: `“Nand Ghars have become a hub for community development, healthcare awareness, and child nutrition Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted.”`,
+//     name: "— Block Development Officer",
+//   },
+//   {
+//     id: 4,
+//     image: "/Infrastructure.png",
+//     text: `“The infrastructure upgrades and digital enablement have transformed early education delivery Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars  As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted.”`,
+//     name: "— District Education Officer",
+//   },
+//   {
+//     id: 5,
+//     image: "/Voice1.png",
+//     text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars  As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable the public perception of Anganwadi centers has improved significantly Also now avaiable Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly. The morale of the staff—workers and helpers—has been boosted.”`,
+//     name: "— Sikarama Ram Choyal, Deputy Director, Bharatpur",
+//   },
+// ];

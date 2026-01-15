@@ -33,21 +33,12 @@ export default function InfrastructureUpgradation() {
             "
           >
             {/* ROOF VECTOR */}
-            <div className="w-[262px] h-[57.5px]">
-              <svg
-                viewBox="0 0 262 58"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-auto"
-              >
-                <path
-                  d="M2 56L131 2L260 56"
-                  stroke="#1D69AC"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+            <div className="w-[262px] h-[58px]">
+              <img
+                src="/Vector (2).png"
+                alt="Roof decoration"
+                className="w-full h-full object-contain"
+              />
             </div>
 
             {/* TITLE */}

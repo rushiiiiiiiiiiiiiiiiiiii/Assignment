@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       {/* translucent layer like figma */}
-      <div className="bg-white/50 backdrop-blur-sm">
+      <div className="bg-white/50 backdrop-blur-[24px]">
         <Container>
           <div className="flex items-center justify-between h-[64px]">
             {/* LOGO */}

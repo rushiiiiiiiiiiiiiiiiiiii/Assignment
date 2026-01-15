@@ -11,38 +11,33 @@ const STATS = [
 export default function AtGlance() {
   return (
     <section className="w-full bg-[#F7F5EF]">
-      {/* FRAME */}
+      {/* 1440 FRAME */}
       <div className="max-w-[1440px] mx-auto px-[16px] lg:px-[80px] py-[30px] flex flex-col items-center gap-[24px]">
         {/* ROOF VECTOR */}
-        <div className="w-[262px] h-[57.5px]">
-          <svg
-            width="262"
-            height="58"
-            viewBox="0 0 262 58"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2 56L131 2L260 56"
-              stroke="#1D69AC"
-              strokeWidth="6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+        <div className="w-[262px] h-[58px]">
+          <img
+            src="/Vector (2).png"
+            alt="Roof decoration"
+            className="w-full h-full object-contain"
+          />
         </div>
 
-        {/* MAIN TEXT */}
+        {/* MAIN TEXT — PIXEL PERFECT DESKTOP */}
         <p
           className="
+            w-full
             max-w-[693px]
             text-center
-            text-[18px] sm:text-[20px] lg:text-[22px]
-            leading-[22px]
             font-semibold
-            font-parkinsans
-            text-[#1E1E1E]
+            text-[#1F2937]
+
+            text-[16px]
+            leading-[28px]
+
+            lg:text-[22px]
+            lg:leading-[22px]
           "
+          style={{ fontFamily: "Parkinsans, sans-serif" }}
         >
           Reimagining Anganwadis into modern centres of learning, nutrition,
           healthcare, and opportunity ensuring every child and woman in rural
@@ -52,19 +47,20 @@ export default function AtGlance() {
         {/* SECTION LABEL */}
         <span
           className="
-            text-[14px] lg:text-[16px]
+            text-[14px]
+            lg:text-[16px]
             leading-[16px]
             font-medium
-            font-outfit
+            mt-[28px]
             text-[#1E1E1E]
-            text-center
           "
+          style={{ fontFamily: "Outfit, sans-serif" }}
         >
           OUR REACH & IMPACT
         </span>
 
-        {/* STATS GRID */}
-        <div className="w-full mt-[12px]">
+        {/* STATS — DESKTOP LOCKED */}
+        <div className="w-full mt-[px]">
           <div
             className="
               grid
@@ -73,6 +69,7 @@ export default function AtGlance() {
               md:grid-cols-3
               lg:grid-cols-5
               gap-[14px]
+
               max-w-[1280px]
               mx-auto
             "
@@ -85,28 +82,31 @@ export default function AtGlance() {
                   px-[12px]
                   py-[12px]
                   bg-white
-                  border
-                  border-[#E6E6E6]
+                  border border-[#E6E6E6]
                   rounded-[12px]
+
                   flex
                   items-center
                   justify-between
                 "
               >
                 {/* TEXT */}
-                <div className="flex flex-col gap-[8px]">
+                <div className="flex flex-col gap-[6px]">
                   <span
                     className="
                       text-[#1D69AC]
-                      text-[22px] lg:text-[24px]
-                      font-medium
+                      text-[24px]
                       leading-[24px]
-                      font-parkinsans
+                      font-medium
                     "
+                    style={{ fontFamily: "Parkinsans, sans-serif" }}
                   >
                     {item.value}
                   </span>
-                  <span className="text-[14px] leading-[14px] text-[#4A4A4A]">
+                  <span
+                    className="text-[14px] leading-[14px] text-[#4A4A4A]"
+                    style={{ fontFamily: "Outfit, sans-serif" }}
+                  >
                     {item.label}
                   </span>
                 </div>
@@ -115,7 +115,7 @@ export default function AtGlance() {
                 <img
                   src={item.icon}
                   alt=""
-                  className="w-[44px] h-[44px] lg:w-[54px] lg:h-[60px]"
+                  className="w-[54px] h-[60px] object-contain"
                 />
               </div>
             ))}

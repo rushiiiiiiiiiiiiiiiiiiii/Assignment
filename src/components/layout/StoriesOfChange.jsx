@@ -29,7 +29,7 @@ const STORIES = [
 
 export default function StoriesOfChange() {
   const railRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   /* ACTIVE CARD FROM SCROLL */
   useEffect(() => {
@@ -60,11 +60,18 @@ export default function StoriesOfChange() {
   return (
     <section className="relative w-full bg-[#F7F5EF] overflow-hidden">
       {/* GREEN SHAPE */}
+      {/* GREEN ROOF BACKGROUND — FIGMA MATCH */}
       <div
-        className="absolute inset-x-0 top-0 h-[680px] bg-[#A8D08D]"
+        className="
+    absolute
+    inset-x-0
+    top-0
+    h-[760px]
+    bg-[#A8D08D]
+  "
         style={{
           clipPath:
-            "polygon(0 18%, 15% 5%, 35% 0, 55% 6%, 75% 12%, 100% 20%, 100% 100%, 0 100%)",
+            "polygon(0% 28%, 12% 18%, 30% 4%, 88% 24%, 100% 28%, 100% 100%, 0% 100%)",
         }}
       />
 
@@ -78,17 +85,18 @@ export default function StoriesOfChange() {
         </p>
 
         {/* SCROLL RAIL */}
-        <div
-          ref={railRef}
-          className="
-            flex gap-[24px]
-            px-[16px] md:px-[24px] pr-[120px]
-            overflow-x-auto
-            scroll-smooth
-            no-scrollbar
-            snap-x snap-mandatory
-          "
-        >
+      <div
+  ref={railRef}
+  className="
+    flex gap-[15px]
+    px-[16px] md:px-[24px] pr-[120px]
+    overflow-x-auto
+    scroll-smooth
+    no-scrollbar
+    snap-x snap-mandatory
+  "
+>
+
           {STORIES.map((story, index) => {
             const isActive = index === activeIndex;
             const isNear = Math.abs(index - activeIndex) === 1;
@@ -98,7 +106,7 @@ export default function StoriesOfChange() {
                 key={story.id}
                 className={`
                   flex-shrink-0 snap-center
-                  transition-transform duration-500 ease-out
+                  transition-transform duration-500 ease-out  
                   ${
                     isActive
                       ? "scale-100 z-20"

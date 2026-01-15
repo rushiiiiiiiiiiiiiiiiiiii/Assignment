@@ -4,29 +4,18 @@ import { HeroButtons } from "./HeroButtons";
 
 export default function Hero() {
   const images = ["/home.jpg", "/report3.png"];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 3000);
-
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
-    <section
-      className="
-        relative
-        w-full
-        h-screen
-lg:h-[800px]
-
-        overflow-hidden
-      "
-    >
-      {/* BACKGROUND IMAGE */}
+    <section className="relative w-full h-screen lg:h-[800px] overflow-hidden">
+      {/* BACKGROUND */}
       <img
         src={images[currentIndex]}
         alt="Hero"
@@ -35,20 +24,16 @@ lg:h-[800px]
           w-full h-full
           object-cover
           object-[20%_50%]
-          transition-opacity
-          duration-700
         "
       />
 
       {/* 1440 FRAME */}
       <div className="relative max-w-[1440px] mx-auto h-full">
-        {/* TEXT BLOCK */}
+        {/* TEXT BLOCK — LOCKED */}
         <div
           className="
             absolute
-            flex
-            flex-col
-            gap-[16px]
+            flex flex-col gap-[16px]
 
             /* MOBILE */
             bottom-[96px]
@@ -61,9 +46,9 @@ lg:h-[800px]
             sm:bottom-[120px]
             sm:left-[40px]
             sm:right-auto
+            sm:w-[420px]
             sm:text-left
             sm:items-start
-            sm:w-[420px]
 
             /* DESKTOP — FIGMA EXACT */
             lg:top-[223px]
@@ -71,8 +56,8 @@ lg:h-[800px]
             lg:left-auto
             lg:bottom-auto
             lg:w-[530px]
-            lg:items-start
             lg:text-left
+            lg:items-start
           "
         >
           <HeroText />
@@ -86,12 +71,8 @@ lg:h-[800px]
             bottom-[24px]
             left-1/2
             -translate-x-1/2
-            flex
-            items-center
-            gap-[12px]
-            text-white
-            text-[16px]
-            sm:text-[18px]
+            flex items-center gap-[12px]
+            text-white text-[16px] sm:text-[18px]
           "
         >
           <button
@@ -100,20 +81,18 @@ lg:h-[800px]
                 prev === 0 ? images.length - 1 : prev - 1
               )
             }
-            className="opacity-80 hover:opacity-100 transition"
+            className="opacity-80 hover:opacity-100"
           >
             ←
           </button>
 
-          <span>
-            {currentIndex + 1}/{images.length}
-          </span>
+          <span>{currentIndex + 1}/{images.length}</span>
 
           <button
             onClick={() =>
               setCurrentIndex((prev) => (prev + 1) % images.length)
             }
-            className="opacity-80 hover:opacity-100 transition"
+            className="opacity-80 hover:opacity-100"
           >
             →
           </button>

@@ -115,7 +115,7 @@ export default function StoriesOfChange() {
           ref={railRef}
           className="
     flex gap-[15px]
-    px-[12px] md:px-[24px] lg:px-[80px]
+    px-[12px] md:px-[24px] lg:px-[0px]
     overflow-x-auto
     scroll-smooth
     no-scrollbar

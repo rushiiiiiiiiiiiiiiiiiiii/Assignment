@@ -12,16 +12,53 @@ import Footer from "./layout/Footer";
 export default function Home() {
   return (
     <main className="w-full bg-[#F7F5EF]">
+      {/* NAVBAR (FIXED) */}
       <Navbar />
-      <Hero />
-      <AtGlance/>
-      <OurPillars/>
-      <InfrastructureUpgradation/>
-      <StoriesOfChange/>
-      <RealVoicesRealChange/>
-      <NewsReports/>
-      <SocialUpdates/>
-      <Footer/>
+
+      {/* HERO */}
+      <section id="hero">
+        <Hero />
+      </section>
+
+      {/* ABOUT / AT A GLANCE */}
+      <section id="about">
+        <AtGlance />
+      </section>
+
+      {/* OUR WORK */}
+      <section id="our-work">
+        <OurPillars />
+      </section>
+
+      {/* INFRASTRUCTURE */}
+      <section id="infrastructure">
+        <InfrastructureUpgradation />
+      </section>
+
+      {/* OUR IMPACT */}
+      <section id="our-impact">
+        <StoriesOfChange />
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section id="voices">
+        <RealVoicesRealChange />
+      </section>
+
+      {/* MEDIA / NEWS */}
+      <section id="media">
+        <NewsReports />
+      </section>
+
+      {/* SOCIAL */}
+      <section id="social">
+        <SocialUpdates />
+      </section>
+
+      {/* CONTACT / FOOTER */}
+      <section id="contact">
+        <Footer />
+      </section>
     </main>
   );
 }

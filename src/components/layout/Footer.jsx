@@ -11,11 +11,10 @@ export default function Footer() {
             mx-auto
             px-[80px]
             py-[32px]
-
+          
             flex
             items-center
             justify-between
-
             max-lg:flex-col
             max-lg:items-start
             max-lg:gap-[24px]

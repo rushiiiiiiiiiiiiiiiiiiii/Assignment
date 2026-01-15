@@ -76,20 +76,22 @@ export default function AtGlance() {
           >
             {STATS.map((item) => (
               <div
-                key={item.label}
-                className="
-                  h-[86px]
-                  px-[12px]
-                  py-[12px]
-                  bg-white
-                  border border-[#E6E6E6]
-                  rounded-[12px]
+  key={item.label}
+  className="
+    h-[86px]
+    px-[12px]
+    py-[12px]
 
-                  flex
-                  items-center
-                  justify-between
-                "
-              >
+    bg-[#FFFDF9]
+    border border-[#E5E7EB]
+    rounded-[16px]
+
+    flex items-center justify-between
+
+    shadow-[0px_1px_6px_rgba(0,0,0,0.06),inset_0px_1px_0px_rgba(255,255,255,0.8)]
+  "
+>
+
                 {/* TEXT */}
                 <div className="flex flex-col gap-[6px]">
                   <span

@@ -4,31 +4,31 @@ const TESTIMONIALS = [
   {
     id: 1,
     image: "/Voice1.png",
-    text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly...”`,
+    text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly”`,
     name: "— Sikarama Ram Choyal, Deputy Director, Bharatpur",
   },
   {
     id: 2,
     image: "/Infrastructure.png",
-    text: `“The infrastructure upgrades and digital enablement have transformed early education delivery. Parents are more engaged and attendance has improved across centers...”`,
+    text: `“The infrastructure upgrades and digital enablement have transformed early education delivery. Parents are more engaged and attendance has improved across centers Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly Also now avaiable”`,
     name: "— District Education Officer",
   },
   {
     id: 3,
     image: "/Education.jpg",
-    text: `“Nand Ghars have become a hub for community development, healthcare awareness, and child nutrition...”`,
+    text: `“Nand Ghars have become a hub for community development, healthcare awareness, and child nutrition Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars. As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable”`,
     name: "— Block Development Officer",
   },
   {
     id: 4,
     image: "/Infrastructure.png",
-    text: `“The infrastructure upgrades and digital enablement have transformed early education delivery...”`,
+    text: `“The infrastructure upgrades and digital enablement have transformed early education delivery Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars  As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable”`,
     name: "— District Education Officer",
   },
   {
     id: 5,
     image: "/Voice1.png",
-    text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars...”`,
+    text: `“Several Anganwadi centers in Bharatpur district have been commendably developed into Nand Ghars  As a result, the public perception of Anganwadi centers has improved significantly the public perception of Anganwadi centers has improved significantly Also now avaiable the public perception of Anganwadi centers has improved significantly Also now avaiable”`,
     name: "— Sikarama Ram Choyal, Deputy Director, Bharatpur",
   },
 ];
@@ -106,7 +106,7 @@ export default function RealVoicesRealChange() {
               leading-[120%]
               md:text-[15px]
               sm:text-[14px]
-              mb-[16px]
+              mb-[px]
             "
             style={{ fontFamily: "Outfit, sans-serif" }}
           >
@@ -156,7 +156,21 @@ export default function RealVoicesRealChange() {
         </div>
 
         {/* CTA */}
-        <div className="mt-[40px] flex flex-col sm:flex-col items-center gap-[32px]">
+        <div
+          className="
+    mt-[40px]
+    flex
+    flex-col
+    items-center
+    gap-[24px]
+
+    lg:flex-row
+    lg:justify-center
+    lg:items-center
+    lg:gap-[48px]
+  "
+        >
+          {/* TEXT */}
           <p
             className="text-[16px]"
             style={{ fontFamily: "Outfit, sans-serif" }}
@@ -164,16 +178,29 @@ export default function RealVoicesRealChange() {
             Be part of the transformation
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-1 gap-[21px]">
+          {/* BUTTON GRID */}
+          <div
+            className="
+      grid
+      grid-cols-2
+      gap-[21px]
+
+      sm:grid-cols-2
+      lg:grid-cols-2
+    "
+          >
             <button className="h-[47px] px-[24px] rounded-full border-[2px] border-[#1D69AC] text-[#1D69AC] text-[14px] font-medium">
               ADOPT A NAND GHAR
             </button>
+
             <button className="h-[47px] px-[24px] rounded-full border-[2px] border-[#1D69AC] text-[#1D69AC] text-[14px] font-medium">
               DONATE NOW
             </button>
+
             <button className="h-[47px] px-[24px] rounded-full bg-[#FFD200] text-[14px] font-medium">
               PARTNER WITH US
             </button>
+
             <button className="h-[47px] px-[24px] rounded-full bg-[#FFD200] text-[14px] font-medium">
               VOLUNTEER WITH US
             </button>

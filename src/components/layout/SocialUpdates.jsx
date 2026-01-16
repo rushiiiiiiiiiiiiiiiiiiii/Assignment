@@ -29,7 +29,7 @@ export default function SocialUpdates() {
       >
         {/* TITLE */}
         <p
-          className="text-center text-[14px] tracking-wide mb-[40px]"
+          className="text-center text-[14px] tracking-wide mb-[20px]"
           style={{ fontFamily: "Outfit, sans-serif" }}
         >
           SOCIAL UPDATES

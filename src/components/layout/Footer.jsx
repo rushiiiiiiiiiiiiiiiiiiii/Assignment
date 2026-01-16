@@ -9,26 +9,27 @@ export default function Footer() {
           className="
             max-w-[1440px]
             mx-auto
-            px-[10px]
-            h-[112px]
+            px-[44px]
+            py-[31px]
 
-            grid
-            grid-cols-[464px_1fr]
+            flex
             items-center
+            justify-between
+            gap-[24px]
 
+            max-lg:flex-col
+            max-lg:items-start
             max-lg:px-[24px]
-            max-lg:grid-cols-1
-            max-lg:h-auto
-            max-lg:py-[32px]
-            max-lg:gap-[24px]
           "
         >
           {/* TEXT */}
           <p
             className="
+              max-w-[464px]
               text-[22px]
               leading-[28px]
               font-medium
+              text-black
               text-center
             "
             style={{ fontFamily: "Parkinsans, sans-serif" }}
@@ -37,7 +38,7 @@ export default function Footer() {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex gap-[12px] justify-end flex-wrap max-lg:justify-start">
+          <div className="flex gap-[12px] flex-nowrap max-lg:flex-wrap">
             <CTAButton outline>ADOPT A NAND GHAR</CTAButton>
             <CTAButton outline>DONATE NOW</CTAButton>
             <CTAButton filled>PARTNER WITH US</CTAButton>
@@ -52,38 +53,29 @@ export default function Footer() {
           className="
             max-w-[1440px]
             mx-auto
-            px-[40px]
-            py-[48px]
+            px-[44px]
+            py-[31px]
 
-            grid
-            grid-cols-[360px_1fr]
-            gap-x-[60px]
+            flex
+            items-start
+            gap-[98px]
 
+            max-lg:flex-col
             max-lg:px-[24px]
-            max-lg:grid-cols-1
-            max-lg:gap-y-[40px]
+            max-lg:gap-[40px]
           "
         >
           {/* LOGOS */}
-          <div className="flex items-start gap-[32px]">
+          <div className="flex items-start gap-[32px] shrink-0">
             <img
               src="/footerlogo.png"
-              alt="Foundation Logos"
+              alt="Anil Agarwal Foundation"
               className="h-[86px]"
             />
           </div>
 
           {/* LINKS */}
-          <div
-            className="
-              grid
-              grid-cols-4
-
-              max-lg:grid-cols-2
-              max-sm:grid-cols-1
-              max-lg:gap-y-[32px]
-            "
-          >
+          <div className="flex justify-between w-full max-lg:flex-wrap max-lg:gap-y-[32px]">
             <FooterColumn title="NAVIGATE">
               <li>Home</li>
               <li>About Us</li>
@@ -110,7 +102,7 @@ export default function Footer() {
             </FooterColumn>
 
             <FooterColumn title="FIND US">
-              <li className="flex items-start gap-[8px]">
+              <li className="flex items-start gap-[8px] max-w-[260px]">
                 <img src="/loc.png" className="w-[16px] h-[16px] mt-[3px]" />
                 Core-6, 3rd Flr, Scope Complex, Lodhi Road, Delhi-110003
               </li>
@@ -158,7 +150,7 @@ function CTAButton({ children, outline, filled }) {
 
 function FooterColumn({ title, children }) {
   return (
-    <div>
+    <div className="min-w-[140px]">
       <h4 className="text-white text-[14px] font-semibold mb-[14px]">
         {title}
       </h4>

@@ -32,7 +32,7 @@ const PILLARS = [
 ];
 
 export default function OurPillars() {
-  const [hoveredId, setHoveredId] = useState(0); // default hovered like Figma
+  const [hoveredId, setHoveredId] = useState(2); // default hovered like Figma
 
   return (
     <section className="w-full bg-[#F7F5EF]">

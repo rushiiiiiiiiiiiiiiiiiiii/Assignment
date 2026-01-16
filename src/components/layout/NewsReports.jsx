@@ -63,7 +63,7 @@ export default function NewsReports() {
       <div className="max-w-[1440px] mx-auto px-[16px] sm:px-[24px] lg:px-[80px] py-[40px]">
         {/* TITLE */}
         <p
-          className="text-center text-[14px] uppercase tracking-wide mb-[32px]"
+          className="text-center text-[14px] uppercase tracking-wide mb-[24px]"
           style={{ fontFamily: "Outfit, sans-serif" }}
         >
           NEWS & REPORTS

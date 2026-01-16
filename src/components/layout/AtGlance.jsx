@@ -32,10 +32,10 @@ export default function AtGlance() {
             text-[#1F2937]
 
             text-[16px]
-            leading-[28px]
+            leading-none
 
             lg:text-[22px]
-            lg:leading-[22px]
+            lg:leading-none
           "
           style={{ fontFamily: "Parkinsans, sans-serif" }}
         >
@@ -60,7 +60,7 @@ export default function AtGlance() {
         </span>
 
         {/* STATS — DESKTOP LOCKED */}
-        <div className="w-full mt-[px]">
+        <div className="w-full">
           <div
             className="
               grid
@@ -76,8 +76,8 @@ export default function AtGlance() {
           >
             {STATS.map((item) => (
               <div
-  key={item.label}
-  className="
+                key={item.label}
+                className="
     h-[86px]
     px-[12px]
     py-[12px]
@@ -90,10 +90,9 @@ export default function AtGlance() {
 
     shadow-[0px_1px_6px_rgba(0,0,0,0.06),inset_0px_1px_0px_rgba(255,255,255,0.8)]
   "
->
-
+              >
                 {/* TEXT */}
-                <div className="flex flex-col gap-[6px]">
+                <div className="flex flex-col gap-[18px]">
                   <span
                     className="
                       text-[#1D69AC]
@@ -106,7 +105,7 @@ export default function AtGlance() {
                     {item.value}
                   </span>
                   <span
-                    className="text-[14px] leading-[14px] text-[#4A4A4A]"
+                    className="text-[14px] leading-[14px] text-[##1F2937]"
                     style={{ fontFamily: "Outfit, sans-serif" }}
                   >
                     {item.label}

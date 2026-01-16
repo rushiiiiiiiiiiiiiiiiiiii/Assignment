@@ -36,7 +36,7 @@ export default function Hero() {
             className="
               absolute inset-0
               w-full h-full
-              object-fill
+              object-contain
               animate-slide-out-left
             "
             alt=""

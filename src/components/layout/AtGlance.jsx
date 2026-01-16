@@ -32,10 +32,10 @@ export default function AtGlance() {
             text-[#1F2937]
 
             text-[16px]
-            leading-none
+            leading-[1.3]
 
             lg:text-[22px]
-            lg:leading-none
+            lg:leading-[1.3]
           "
           style={{ fontFamily: "Parkinsans, sans-serif" }}
         >

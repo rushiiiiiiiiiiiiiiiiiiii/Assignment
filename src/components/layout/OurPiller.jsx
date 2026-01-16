@@ -75,7 +75,7 @@ export default function OurPillars() {
               duration-300
               ease-in-out
               shrink-0
-              ${isHovered ? "w-[400px]" : "w-[240px]"}
+              ${isHovered ? "w-[350px]" : "w-[220px]"}
             `}
                   >
                     {/* DEFAULT STATE */}
